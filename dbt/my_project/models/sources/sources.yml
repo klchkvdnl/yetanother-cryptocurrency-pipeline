@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: dev
+    database: db
+    tables:
+      - name: raw_crypto_currency_data
+        columns:
+          - name: id
+          - name: json_data
+          - name: inserted_at
