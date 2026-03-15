@@ -6,7 +6,7 @@
 <picture width="500">
   <img
     width="600"
-    src="https://github.com/klchkvdnl/yetanother-cryptocurrency-pipeline/blob/master/pipeline-image.png"
+    src="https://raw.githubusercontent.com/klchkvdnl/yetanother-cryptocurrency-pipeline/refs/heads/master/pipeline-image.png"
     alt="Pipeline inage (light)"
   />
 </picture>
@@ -19,8 +19,13 @@
 - [dbt-postgres 1.9.latest](https://github.com/dbt-labs/dbt-core/pkgs/container/dbt-postgres)
 
 ### Short description for pipeline
-
-
+- with python data goes to postgres and stores as raw json with ingestion timestamp
+- by default airflow scheduled for 1 request/minute
+- dbt shape data for staging layer
+    - for each cryptocurrensy dbt take current_price, market_cap, total_volume, last_updated and etc.
+- dbt shape data for mart layer
+    - there is only data for bitcoin
+- all data stores into postgres
 
 ### Main resource
 
